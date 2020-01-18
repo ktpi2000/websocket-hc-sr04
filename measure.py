@@ -7,8 +7,8 @@ import threading
 import time
 GPIO.setwarnings(False)
 
-Trig = 11
-Echo = 13
+Trig = 19
+Echo = 21
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(Trig, GPIO.OUT)
@@ -19,7 +19,7 @@ server = None
 
 def websocket_run():
     global server
-    server = WebsocketServer(3000, "192.168.0.9")
+    server = WebsocketServer(3000, "192.168.0.14")
     server.run_forever()
 
 def main():
