@@ -42,6 +42,6 @@ def main():
 
         server.send_message_to_all(str(distance))
         print("send")
-        time.sleep(0.75)
+        time.sleep(1)
 
 main()
