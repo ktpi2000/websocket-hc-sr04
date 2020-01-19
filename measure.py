@@ -15,11 +15,9 @@ GPIO.setup(Trig, GPIO.OUT)
 GPIO.setup(Echo, GPIO.IN)
 GPIO.output(Trig, GPIO.LOW)
 
-server = None
+server = WebsocketServer(3000, "192.168.0.14")
 
 def websocket_run():
-    global server
-    server = WebsocketServer(3000, "192.168.0.14")
     server.run_forever()
 
 def main():
